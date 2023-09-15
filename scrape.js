@@ -22,7 +22,7 @@ async function run() {
          * Set the correct proxy country for the site
          */
         proxyCountry: 'France',
-        
+
         /**
          * This is only needed when scraping .fr .nl domains etc
          */
@@ -42,7 +42,7 @@ async function run() {
         "cmd": "request.get",
 
         /**
-         * The URL you want to scrape, then intercept requests from this link and return it.
+         * The URL you want to scrape, in this case the catalog
          */
         "url": "https://www.vinted.fr/catalog?search_text=bonnet&order=newest_first",
     })
