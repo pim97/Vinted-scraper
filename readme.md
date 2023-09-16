@@ -47,3 +47,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Keywords for Vinted.com / Vinted.fr / Vinted.nl
 Fashion marketplace, Second-hand clothing, Online thrift store, Pre-loved fashion, Clothing listings, Seller profiles, Pricing details, Item availability, Item images, User reviews, Shipping options, Item categories, Trending fashion items.
+
+## Legal and Ethical Considerations
+
+Remember to adhere to legal and ethical guidelines when scraping websites. Always respect the website's terms of service and scraping policies. Ensure your use of the scraped data complies with applicable laws and regulations, especially regarding data privacy and intellectual property rights. 🚫⚖️
+
+*Disclaimer: This web scraping guide is intended solely for educational and informational purposes. Please use web scraping responsibly and in accordance with the terms and conditions of the target website.* 📚🔍
