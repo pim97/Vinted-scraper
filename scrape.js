@@ -14,45 +14,20 @@ const scrappey = new Scrappey(SCRAPPEY_API_KEY);
 async function run() {
 
     /**
-     * For all session options check: https://wiki.scrappey.com/getting-started#78f3fd5551724a78b12d548e95485bbe
-     * We allow for multiple sessions to be created, each session has a different proxy and user-agent and unique fingerprint.
-     */
-    const session = await scrappey.createSession({
-        /**
-         * Set the correct proxy country for the site
-         */
-        proxyCountry: 'France',
-
-        /**
-         * This is only needed when scraping .fr .nl domains etc
-         */
-        whitelistedDomais: [
-            "vinted-core-assets.s3.eu-central-1.amazonaws.com",
-            "vinted.com"
-        ]
-    })
-
-    /**
      * Executes the browser actions requested
      */
     const get = await scrappey.get({
-        /**
-         * Send a GET request
-         */
         "cmd": "request.get",
-
-        /**
-         * The URL you want to scrape, in this case the catalog
-         */
-        "url": "https://www.vinted.fr/catalog?search_text=bonnet&order=newest_first",
+        "url": "https://www.vinted.co.uk/catalog?search_id=22412703813&time=1744394390&catalog[]=3002&order=newest_first&disabled_personalization=true&catalog_from=0&page=1",
+        "interceptFetchRequest": "https://www.vinted.co.uk/api/v2/catalog/items?page=1&per_page=96&time=1744394390&search_text=&catalog_ids=3002&order=newest_first&catalog_from=0&brand_ids=&status_ids=&color_ids=&video_game_platform_ids=",
+        "proxyCountry": "UnitedKingdom",
+        "filter": ["response"],
+        "premiumProxy": true,
+        "whitelistedDomains": [""]
     })
 
     console.log(JSON.stringify(get, undefined, 4))
-
-    /**
-     * Destroys the session, this will free up space for other users
-     */
-    await scrappey.destroySession(session.session)
+    
 }
 
 run().catch(console.error);
